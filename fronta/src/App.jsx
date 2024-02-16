@@ -5,7 +5,11 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div>
+      <Home/>
+      <div className='mt-[7cm]'>
       <Beats/>
+      </div>
+      
     </div>
   );
 }
