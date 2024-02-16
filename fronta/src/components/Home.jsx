@@ -6,7 +6,7 @@ const Home = () => {
     <div className='absolute inset-0 bg-black opacity-50 z-10'></div>
    <div className="flex justify-between items-center z-20 ">
    
-   <img src="https://scontent.ftun9-1.fna.fbcdn.net/v/t1.15752-9/417653800_771342754913756_515758657566049752_n.png?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=7p6OH5hM2iwAX-0O_kb&_nc_ht=scontent.ftun9-1.fna&oh=03_AdTdDa4KmO8EAslGvXUaspUkqFuQLYWEam4vyNz-4brlZg&oe=65F6BFAE" alt="" />
+   <img className='z-20' src="https://scontent.ftun9-1.fna.fbcdn.net/v/t1.15752-9/417653800_771342754913756_515758657566049752_n.png?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=7p6OH5hM2iwAX-0O_kb&_nc_ht=scontent.ftun9-1.fna&oh=03_AdTdDa4KmO8EAslGvXUaspUkqFuQLYWEam4vyNz-4brlZg&oe=65F6BFAE" alt="" />
  
  <div className="flex space-x-8 mt-[1cm] z-20 ">
      <h1 className="text-xl text-white font-jakarta ">HOME</h1>
@@ -33,8 +33,8 @@ const Home = () => {
  </div>
  
  <h1 className='text-8xl font-Anton font-black text-[132px] text-[#84cc16] '>EXPERIENCE</h1>
- <h1 className='text-[#3f6212] text-xl font-popin ml-[130px] '>We have the perfect music with free licensing for your </h1>
- <h1 className='text-[#3f6212] text-xl font-popin ml-[170px] '>creativity. Discover the possibilities now!</h1>
+ <h1 className='text-[#d9f99d] text-2xl font-popin ml-[130px] '>We have the perfect music with free licensing for your </h1>
+ <h1 className='text-[#d9f99d] text-2xl font-popin ml-[180px] '>creativity. Discover the possibilities now!</h1>
  
 </div>
 
