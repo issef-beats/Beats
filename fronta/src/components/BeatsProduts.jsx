@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CiHeart } from "react-icons/ci";
 import { FaRegPlayCircle } from "react-icons/fa";
+import { FaRegPauseCircle } from "react-icons/fa";
 
 function BeatsProduts() {
+  const[play,setPlay]=useState(false)
+  const[ind,setInd]=useState(-1)
+  const [heartColor, setHeartColor] = useState('text-white');
+  const handleHeartClick = () => {
+    if (heartColor==="text-white"){
+      setHeartColor('text-lime-500');
+    }else
+    setHeartColor('text-white');
+    
+  };
   return (
+    <div>
     <div className='mt-8 flex flex-wrap justify-center gap-12'>
       {[...Array(8)].map((_, index) => (
         <div key={index} className='relative'>
@@ -15,12 +27,16 @@ function BeatsProduts() {
             </div>
             <hr className='mt-2 border-gray-500' />
             <div className='flex justify-between mt-2'>
-              <CiHeart className='text-white' size={20}/>
-              <FaRegPlayCircle className='text-lime-500' size={20}/>
+            <CiHeart className={heartColor} size={20} onClick={handleHeartClick}  />
+              {!play&&index===ind?<FaRegPauseCircle className='text-lime-500' size={20} onClick={()=>{setInd(-1);setPlay(!play)}}/>
+           :<FaRegPlayCircle className='text-lime-500' size={20} onClick={()=>{setInd(index);setPlay(!play)}}/>
+              }
             </div>
           </div>
         </div>
       ))}
+    </div>
+    <button className='mt-[60px] ml-[700px] text-lime-500 border border-lime-500 rounded-lg p-2'>View More</button>
     </div>
   );
 }
