@@ -3,7 +3,8 @@ import { CiHeart } from "react-icons/ci";
 import { FaRegPlayCircle } from "react-icons/fa";
 import { FaRegPauseCircle } from "react-icons/fa";
 
-function BeatsProduts() {
+function BeatsProduts({player,setPlayer}) {
+  console.log(setPlayer);
   const[play,setPlay]=useState(false)
   const[ind,setInd]=useState(-1)
   const [heartColor, setHeartColor] = useState('text-white');
@@ -29,14 +30,17 @@ function BeatsProduts() {
             <div className='flex justify-between mt-2'>
             <CiHeart className={heartColor} size={20} onClick={handleHeartClick}  />
               {!play&&index===ind?<FaRegPauseCircle className='text-lime-500' size={20} onClick={()=>{setInd(-1);setPlay(!play)}}/>
-           :<FaRegPlayCircle className='text-lime-500' size={20} onClick={()=>{setInd(index);setPlay(!play)}}/>
+           :<FaRegPlayCircle className='text-lime-500' size={20} onClick={()=>{setInd(index);setPlay(!play);setPlayer(!player)}}/>
               }
             </div>
           </div>
         </div>
       ))}
     </div>
-    <button className='mt-[60px] ml-[700px] text-lime-500 border border-lime-500 rounded-lg p-2'>View More</button>
+    <button className='mt-[60px] ml-[690px] text-lime-500 border border-lime-500 rounded-lg p-2'>View More</button>
+    <div>
+      
+    </div>
     </div>
   );
 }
