@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import DropNavbar from './dropNavbar'
+import Beats from './Beats'
+import Footer from './Footer';
+import MusicPlayer from './PlayBar'
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const Home = () => {
+  const [musicPlayer,setPlayer]=useState(false)
+  const navigate = useNavigate();
+  const handleContact=()=>{
+    navigate('/contact')
+  }
+  const handleHome=()=>{
+    navigate('/')
+  }
   return (
     <div className='bg-malek bg-no-repeat bg-cover bg-center h-[20cm] relative'>
     <div className='absolute inset-0 bg-black opacity-50 z-10'></div>
@@ -10,10 +22,10 @@ const Home = () => {
    <img className='z-20' src="https://scontent.ftun9-1.fna.fbcdn.net/v/t1.15752-9/417653800_771342754913756_515758657566049752_n.png?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=7p6OH5hM2iwAX-0O_kb&_nc_ht=scontent.ftun9-1.fna&oh=03_AdTdDa4KmO8EAslGvXUaspUkqFuQLYWEam4vyNz-4brlZg&oe=65F6BFAE" alt="" />
  
  <div className="flex space-x-8 mt-[1cm] z-20 ">
-     <h1 className="text-xl text-white font-jakarta">HOME</h1>
+     <h1 className="text-xl text-white font-jakarta hover:cursor-pointer" onClick={handleHome}>HOME</h1>
      <h1 className="text-xl text-white  font-jakarta">PROFILE</h1>
      <h1 className="text-xl text-white  font-jakarta">ABOUT US</h1>
-     <h1 className="text-xl text-white  font-jakarta">CONTACT </h1>
+     <h1 className="text-xl text-white  font-jakarta hover:cursor-pointer" onClick={handleContact}>CONTACT </h1>
  </div>
 
  <div className="flex space-x-4 mt-[1cm] mr-[4cm] z-20">
@@ -44,7 +56,7 @@ const Home = () => {
 
 
 
-<div className='flex justify-center  rounded-[30px] mr-[13%] ml-[13%] mt-[2cm] mb-[2cm]  '>
+<div className='flex justify-center  rounded-[30px] mr-[13%] ml-[13%] mt-[2cm] mb-[1cm]  '>
 
  <div className="text-center w-full l-full mb-[2cm] mt-[2cm] ">
   <h1 className='text-white  text-4xl font-popin '>Music Downloads for All Your Creative Ventures</h1>
@@ -65,6 +77,14 @@ const Home = () => {
 </div>
  </div>
 </div>
+<div>
+  <Beats player={musicPlayer} setPlayer={setPlayer} />
+</div>
+{musicPlayer?<div className="fixed bottom-0 right-0 left-0">
+<MusicPlayer/>
+</div>:<></>}
+<Footer/>
+
 </div>
 
   )

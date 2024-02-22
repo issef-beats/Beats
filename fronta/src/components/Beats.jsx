@@ -2,7 +2,7 @@ import React from 'react'
 import { CiSearch } from "react-icons/ci";
 import BeatsProduts from './BeatsProduts';
 import Footer from './Footer';
-function Beats() {
+function Beats({player,setPlayer}) {
   return (
     <div className='w-full flex flex-col items-center justify-center'>
         <div className='flex flex-row justify-between gap-4'>
@@ -23,7 +23,7 @@ function Beats() {
         </div>
         </div>
         <div>
-          <BeatsProduts/>
+          <BeatsProduts player={player} setPlayer={setPlayer} />
         </div>
     </div> 
   )

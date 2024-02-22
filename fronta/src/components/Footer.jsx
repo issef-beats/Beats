@@ -5,7 +5,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className='flex flex-row justify-between mt-10 p-[50px]'>
+    <div className='flex flex-row justify-between  p-[50px] w-full'>
         <div className='flex flex-col w-[400px]'>
             <img src="https://scontent.ftun9-1.fna.fbcdn.net/v/t1.15752-9/417653800_771342754913756_515758657566049752_n.png?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=7p6OH5hM2iwAX-0O_kb&_nc_ht=scontent.ftun9-1.fna&oh=03_AdTdDa4KmO8EAslGvXUaspUkqFuQLYWEam4vyNz-4brlZg&oe=65F6BFAE" alt="" />
             <p className='text-white'>description for footer description for footer description for footer description for footer description for footer description for footer</p>

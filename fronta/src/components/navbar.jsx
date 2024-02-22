@@ -1,6 +1,7 @@
 import React from 'react'
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+
   return (
 <div className="flex justify-between items-center z-20 ">
    
@@ -10,7 +11,7 @@ const Navbar = () => {
      <h1 className="text-xl text-white font-jakarta">HOME</h1>
      <h1 className="text-xl text-white  font-jakarta">PROFILE</h1>
      <h1 className="text-xl text-white  font-jakarta">ABOUT US</h1>
-     <h1 className="text-xl text-white  font-jakarta">CONTACT </h1>
+     <button onClick={()=>handleContact()} className="text-xl text-white  font-jakarta">CONTACT </button>
    </div>
    
    <div className="flex space-x-4 mt-[1cm] mr-[1cm] z-20">
