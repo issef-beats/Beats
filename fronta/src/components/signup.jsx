@@ -27,8 +27,8 @@ const Login= () => {
         <div
             class="mx-5 bg-black opacity-90  sm:border-t-white/20 shadow-[20px_0_20px_20px] shadow-slate-500/10 dark:shadow-white/20 rounded-lg border-white/20 border-l-white/20 border-r-white/20 sm:shadow-sm lg:rounded-xl lg:shadow-none">
             <div class="flex flex-col p-6">
-                <h3 class="text-4xl font-semibold leading-6 tracking-tighter mb-[10px]">Login</h3>
-                <p class="mt-1.5 text-xl font-medium text-white/50">Welcome back, enter your credentials to continue.
+                <h3 class="text-4xl font-semibold leading-6 tracking-tighter mb-[10px]">sign up</h3>
+                <p class="mt-1.5 text-xl font-medium text-white/50">Welcome, enter your credentials to create an account.
                 </p>
             </div>
             <div class="p-6 pt-0">
@@ -55,6 +55,21 @@ const Login= () => {
                                 class="group relative rounded-lg h-[2cm] border focus-within:border-sky-200 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-[#84cc16]">
                                 <div class="flex justify-between">
                                     <label
+                                        class="text-xl font-medium text-muted-foreground group-focus-within:text-white text-gray-400">Email</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="password" name="password" placeholder="xxx.xxx@mail.com"
+                                        class="block w-full border-0 bg-transparent p-0 text-xl file:my-1 placeholder:text-muted-foreground/90 focus:outline-none focus:ring-0 focus:ring-teal-500 sm:leading-7 text-foreground"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div>
+                            <div
+                                class="group relative rounded-lg h-[2cm] border focus-within:border-sky-200 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-[#84cc16]">
+                                <div class="flex justify-between">
+                                    <label
                                         class="text-xl font-medium text-muted-foreground group-focus-within:text-white text-gray-400">Password</label>
                                 </div>
                                 <div class="flex items-center">
@@ -64,21 +79,16 @@ const Login= () => {
                             </div>
                         </div>
                     </div>
-                    <div class="mt-4 flex items-center justify-between">
-                        <label class="flex items-center gap-2">
-                            <input type="checkbox" name="remember" class="form-checkbox text-[#84cc16] focus:ring-[#84cc16] ring-[#84cc16]"/>
-
-                            <span class="text-xl">Remember me</span>
-                        </label>
-                        <a class="text-xl font-medium text-foreground underline" href="/forgot-password">Forgot
-                            password?</a>
+                    <div className="flex space-x-4 mt-[10px]">
+                    <p>Already have an account ?</p>
+                    <p className='underline'>Login</p>
                     </div>
+              
                     <div class="mt-4 flex items-center justify-end gap-x-2">
-                        <a class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:ring hover:ring-[#84cc16] h-10 px-4 py-2 duration-200"
-                            href="/register">Register</a>
+                       
                         <button
                             class="font-semibold hover:bg-black hover:text-[#84cc16] hover:ring hover:ring-[#84cc16] transition duration-300 inline-flex items-center justify-center rounded-md text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-[#84cc16] text-white h-10 px-4 py-2"
-                            type="submit">Log in</button>
+                            type="submit">Register</button>
                     </div>
                 </form>
             </div>
